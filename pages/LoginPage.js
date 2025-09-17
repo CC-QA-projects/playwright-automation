@@ -26,7 +26,7 @@ class LoginPage {
   }
 
   async isWelcomeUsernameVisible() {
-    await expect(this.welcomeUser).toBeVisible();
+    await expect(this.welcomeUser).toContainText('Welcome')
   }
   async clickLogout() {
     await this.logoutLink.click();

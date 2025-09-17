@@ -6,7 +6,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 
-test('Sign in with valid credentials', async ({ page }) => {
+test('Sign in with valid user credentials', async ({ page }) => {
     const signinPage = new SigninPage(page);
 
     await signinPage.openSignInModal();
@@ -15,7 +15,7 @@ test('Sign in with valid credentials', async ({ page }) => {
     await signinPage.isModalVisible();
 
     // Fill in the username and password fields
-    await signinPage.fillSigninForm('CalvinTEST1', 'testing123');
+    await signinPage.fillSigninForm('CalvinTEST1233', 'testing123');
 
     // Submit the form
     await signinPage.submitSigninForm();
@@ -24,7 +24,7 @@ test('Sign in with valid credentials', async ({ page }) => {
     await signinPage.assertSignupDialog();
 })
 
-test('Sign in with valid credentials 2', async ({ page }) => {
+test('Sign in with valid user 2 credentials', async ({ page }) => {
     const signinPage = new SigninPage(page);
 
     await signinPage.openSignInModal();
@@ -33,7 +33,7 @@ test('Sign in with valid credentials 2', async ({ page }) => {
     await signinPage.isModalVisible();
 
     // Fill in the username and password fields
-    await signinPage.fillSigninForm('CalvinTEST2', 'testing123');
+    await signinPage.fillSigninForm('CalvinTEST2333', 'testing123');
 
     // Submit the form
     await signinPage.submitSigninForm();
