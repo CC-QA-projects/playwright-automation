@@ -7,6 +7,7 @@ This is an automated test suite built with Playwright in JavaScript. It is desig
 - Data-Driven Testing (DDT) using Excel for login functionality
 - Automated login, sign-in, and sign-out flows
 - Best-practice Playwright locators (getByRole, getByText) and assertions (expect)
-- Integrated with GitHub for version control and AI Copilot for faster authoring
+- Integrated with GitHub for version control
+- AI Copilot for faster authoring
 - HTML Reporter for clear test result visualization
 - Tracing enabled for easier debugging of failed runs
