@@ -2,7 +2,7 @@ Playwright Automation Project
 
 This is an automated test suite built with Playwright in JavaScript. It is designed to test the Demoblaze Demo  Web Application. This project demonstrates scalable automation practices using Page Object Model (POM) and Data-Driven Testing (DDT).
 
-Key Features: 
+✨ Key Features: 
 - Page Object Model (POM) for reusable and maintainable code
 - Data-Driven Testing (DDT) using Excel for login functionality
 - Automated login, sign-in, and sign-out flows
