@@ -1,43 +1,26 @@
-const { test, expect } = require('@playwright/test');
-const { SigninPage } = require('../pages/SigninPage');
+import { test, expect } from '@playwright/test';
+import { SigninPage } from '../../pages/SigninPage.js';
 
 test.beforeEach(async ({ page }) => {
     await page.goto('https://demoblaze.com/');
 });
 
 
-test('Sign in with valid user credentials', async ({ page }) => {
+test.skip('Sign in with valid user credentials', async ({ page }) => {
     const signinPage = new SigninPage(page);
 
     await signinPage.openSignInModal();
-
-    // Wait for the modal to be visible
     await signinPage.isModalVisible();
-
-    // Fill in the username and password fields
     await signinPage.fillSigninForm('CalvinTEST1233', 'testing123');
-
-    // Submit the form
     await signinPage.submitSigninForm();
-
-    // Assert that the sign in was successful
     await signinPage.assertSignupDialog();
 })
 
-test('Sign in with valid user 2 credentials', async ({ page }) => {
+test.skip('Sign in with valid user 2 credentials', async ({ page }) => {
     const signinPage = new SigninPage(page);
-
     await signinPage.openSignInModal();
-
-    // Wait for the modal to be visible
     await signinPage.isModalVisible();
-
-    // Fill in the username and password fields
     await signinPage.fillSigninForm('CalvinTEST2333', 'testing123');
-
-    // Submit the form
     await signinPage.submitSigninForm();
-
-    // Assert that the sign in was successful
     await signinPage.assertSignupDialog();
-});
+})

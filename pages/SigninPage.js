@@ -1,4 +1,4 @@
-const { expect } = require('@playwright/test');
+import { expect } from '@playwright/test';
 class SigninPage {
     constructor(page) {
         this.page = page;
@@ -33,6 +33,6 @@ class SigninPage {
         expect(dialog.message()).toBe(expectedMessage);
         await dialog.accept();
     }
-} 
+}
 
-module.exports = { SigninPage };
+export { SigninPage };

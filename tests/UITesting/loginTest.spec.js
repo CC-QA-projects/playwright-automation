@@ -1,10 +1,9 @@
-const { test, expect } = require('@playwright/test');
-const { LoginPage } = require('../pages/LoginPage');
+import { test, expect } from '@playwright/test';
+import { LoginPage } from '../../pages/LoginPage.js';
+import { readCredentials } from '../../utils/excelReader.js';
 
-const path = require('path');
-const { readCredentials } = require('../utils/excelreader');
-const filePath = path.join(__dirname, '../testData/LoginTest.xlsx');
-const credentials = readCredentials(filePath);
+// Use the default credentials path from the utility (project root `testData/LoginTest.xlsx`)
+const credentials = readCredentials();
 
 test.beforeEach(async ({ page }) => {
   await page.goto('https://demoblaze.com/');
@@ -15,7 +14,7 @@ test('Login to demoblaze and assert successful login', async ({ page }) => {
   const loginPage = new LoginPage(page);
 
   await loginPage.openLoginModal();
-  await loginPage.login('CalvinTEST', 'testing123');
+  await loginPage.login('CalvinTEST1233', 'testing123');
   await loginPage.isWelcomeUsernameVisible();
 
 });

@@ -1,5 +1,5 @@
-const { test, expect } = require('@playwright/test');
-const { LoginPage } = require('../pages/LoginPage');
+import { test, expect } from '@playwright/test';
+import { LoginPage } from '../../pages/LoginPage.js';
 
   test.beforeEach(async ({ page }) => {
     await page.goto('https://demoblaze.com/');
