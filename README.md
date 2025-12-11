@@ -1,13 +1,23 @@
-Playwright Automation Project 
+📌 Overview
 
-This is an automated test suite built with Playwright in JavaScript. It is designed to test the Demoblaze Demo  Web Application. This project demonstrates scalable automation practices using Page Object Model (POM) and Data-Driven Testing (DDT).
+This project is a full-stack automation framework built using Playwright Test Runner. It supports both UI automation and API automation, following scalable and maintainable design principles.
 
-✨ Key Features: 
-- Page Object Model (POM) for reusable and maintainable code
-- Data-Driven Testing (DDT) using Excel for login functionality
-- Automated login, sign-in, and sign-out flows
-- Best-practice Playwright locators and assertions 
-- Integrated with GitHub for version control
-- AI Copilot for faster authoring
-- HTML Reporter for clear test result visualization
-- Tracing enabled for easier debugging of failed runs
+🚀 Key Features
+UI Automation
+- Page Object Model (POM) architecture
+- Automated flows for login, add-to-cart, and product navigation
+- Robust selectors and reusable components
+- Excel-based Data-Driven Testing (DDT)
+
+API Automation
+- CRUD validation for Booking API
+- Token-based authentication
+- Dynamic test generation using JSON payload sets
+- Schema validation and negative testing
+- Reusable request utilities
+
+Tooling & DevOps
+- Playwright HTML reporting, traces, screenshots, artifact capture
+- Integrated with GitHub version control
+- Developed with assistance of AI Copilot & Playwright AI agents
+- This project demonstrates real-world automation architecture, maintainability patterns, and thorough validation strategies across both UI and API layers.
