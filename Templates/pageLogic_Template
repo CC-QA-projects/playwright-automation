@@ -1,0 +1,52 @@
+import { expect } from '@playwright/test';
+
+class PageTemplate {
+    constructor(page) {
+        this.page = page;
+
+        // --------------------
+        // Locators
+        // --------------------
+        // Replace these with page-specific elements
+
+        this.primaryButton = page.getByRole('button', { name: 'Primary Action' });
+        this.secondaryButton = page.getByRole('button', { name: 'Secondary Action' });
+
+        this.textFieldOne = page.getByRole('textbox', { name: 'Field One:' });
+        this.textFieldTwo = page.getByRole('textbox', { name: 'Field Two:' });
+
+        this.confirmButton = page.getByRole('button', { name: 'Confirm' });
+        this.successMessage = page.getByText('Success');
+    }
+
+    // --------------------
+    // Actions
+    // --------------------
+
+    async clickPrimaryButton() {
+        await this.primaryButton.click();
+    }
+
+    async fillForm(fieldOneValue, fieldTwoValue) {
+        await this.textFieldOne.fill(fieldOneValue);
+        await this.textFieldTwo.fill(fieldTwoValue);
+    }
+
+    async submitForm() {
+        await this.confirmButton.click();
+    }
+
+    // --------------------
+    // Assertions
+    // --------------------
+
+    async verifySuccessMessage() {
+        await expect(this.page.locator('body')).toContainText('Success');
+    }
+
+    async verifyOnPage(expectedText) {
+        await expect(this.page.locator('body')).toContainText(expectedText);
+    }
+}
+
+export { PageTemplate };

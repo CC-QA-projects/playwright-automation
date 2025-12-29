@@ -21,5 +21,5 @@ test('POST /booking - Minimum required fields', async ({ request }) => {
     if (payload.lastname) expect(body.booking.lastname).toBe(payload.lastname); 
     console.log('POST /booking response body:', body);
     console.log('Created booking ID:', body.bookingid);
-    console.log('firstname and langname in response:', body.booking.firstname ,' ', body.booking.lastname);
+    console.log('firstname and lastname in response:', body.booking.firstname ,' ', body.booking.lastname);
 });
